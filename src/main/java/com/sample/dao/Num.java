@@ -4,17 +4,16 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-
+import java.io.Serializable;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Represents a number.
  * 
  */
-@Transactional
 @Entity
 @Table(name="number")
-public class Num {
+public class Num implements Serializable {
 
 	/**
 	 * Represents the literal value of the number.
